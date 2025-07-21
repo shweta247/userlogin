@@ -1,0 +1,37 @@
+
+<div class="maincontainer">
+ <form class="login-box" [formGroup]="registerForm">
+    <div class="log" >
+       <h1>Sign Up</h1>
+    </div>
+
+ <div class="txt">
+    <label>Full Name</label>
+    <input type="text" is="fullName" formControlName="fullName" name="fullname"  required >
+    
+ </div>
+
+ <div class="email">
+    <div>
+    <label>Email</label>
+</div>
+  <input type="email" is="email" formControlName="email" name="email"  required >
+ </div>
+
+ <div class="psd" >
+    <label>password</label>
+ <input type="password"  formControlName="password" name="password"  required>
+ </div>
+
+
+ <div class="newpsd" >
+  <label>Confirm Password</label>
+  <input type="password"  formControlName="newpassword" name="password"  required>
+ </div>
+
+ <div >
+    <button type="button" (click)="onSignup()">Sign Up</button>
+ </div>
+ <div class="text">Already a member?<a routerLink="/login">Login</a></div>
+ </form>
+</div>
